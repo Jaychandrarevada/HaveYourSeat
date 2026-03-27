@@ -20,7 +20,7 @@ export default function SeatSelection() {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/movies/${id}`);
+        const res = await axios.get((import.meta.env.VITE_API_URL || "http://localhost:5000") + `/api/movies/${id}`);
         setMovie(res.data);
       } catch (err) {
         console.warn('Backend unavailable, using static movie details for SeatSelection:', err);

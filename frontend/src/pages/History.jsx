@@ -13,7 +13,7 @@ export default function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/bookings/mybookings');
+        const res = await axios.get((import.meta.env.VITE_API_URL || "http://localhost:5000") + '/api/bookings/mybookings');
         setBookings(res.data);
       } catch (err) {
         console.error('Failed to fetch history', err);

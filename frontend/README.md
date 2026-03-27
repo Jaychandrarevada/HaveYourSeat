@@ -1,16 +1,56 @@
-# React + Vite
+# HaveYourSeat 🎬 🎫
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**HaveYourSeat** is a premium, modern, full-stack web application designed for seamlessly discovering movies and reserving theater tickets. It utilizes a stunning "Deep Glass" frosted UI aesthetic and integrates a robust MERN (MongoDB, Express, React, Node.js) architecture.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+- **Frontend** (Vercel): *(Deployment in progress)*
+- **Backend API** (Render): *(Deployment successful)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **Cinematic Discovery:** Beautiful, animated movie cards pulling official high-definition movie artworks natively into your browser.
+- **Seat Mapping Engine:** An interactive theater grid that visually tracks and mathematically reserves ticket choices in real-time.
+- **Authentication:** Secure user registration, encrypted login flows, and active session management utilizing `bcrypt` and JWT algorithms.
+- **Ticket Generation:** Programmatically renders and exports your completed movie ticket into a crisp, high-fidelity PNG image (`html-to-image`) straight to your local device.
+- **Unrestricted Poster Engine:** Integrated dashboard letting anyone effortlessly paste custom URLs to overhaul the movie imagery instantaneously.
 
-## React Compiler
+## 🛠️ Tech Stack
+### Frontend (The Visual Experience)
+*   **React 19** utilizing Vite for ultra-fast Hot Module Replacement (HMR).
+*   **Tailwind CSS v4** powering custom blur drops, complex lighting gradients, and the deep cohesive styling language.
+*   **Lucide-React** for sharp, scalable SVG iconography.
+*   **Axios** for fluid, stateless HTTP transmission.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend (The Core Engine)
+*   **Node.js & Express** providing lightning-fast non-blocking API endpoints.
+*   **MongoDB & Mongoose** orchestrating complex relational schemas spanning Users, Movies, and Booking ledgers securely.
+*   **Dotenv** isolating critical passwords and environments.
 
-## Expanding the ESLint configuration
+## 💻 Getting Started Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Database Setup
+Ensure you have a local MongoDB instance running, or connect directly to MongoDB Atlas.
+
+### 2. Run the Backend Server
+```bash
+cd backend
+npm install
+# Set your MONGODB_URI and JWT_SECRET in a .env file!
+npm start
+```
+
+### 3. Run the Frontend Client
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Open `http://localhost:5173` in your browser.
+
+## 🌍 Cloud Deployment Structure
+This repository perfectly aligns with cloud-native hosting standards:
+1. **Database:** MongoDB Atlas serverless clusters.
+2. **Backend Architecture:** Render.com hosting the Express.js APIs.
+3. **Frontend Edge:** Vercel CDN hosting the statically built Vite pipeline.
+
+---
+*Built with passion, robust modern technologies, and an unwavering focus on immersive design aesthetics.*
